@@ -5,13 +5,11 @@
 int main() {
     int i;
     char **arr;
-
     arr = (char**)malloc(3 * sizeof(char*));
     if (arr == NULL) {
         printf("Memory allocation failed!\n");
         return 1;
     }
-
     for (i = 0; i < 3; i++) {
         arr[i] = (char*)malloc(50 * sizeof(char));
         if (arr[i] == NULL) {
@@ -19,7 +17,6 @@ int main() {
             return 1;
         }
     }
-
     printf("Enter 3 strings: ");
     for (i = 0; i < 3; i++) {
         scanf("%s", arr[i]);
@@ -44,12 +41,10 @@ int main() {
             return 1;
         }
     }
-
     printf("Enter 2 more strings: ");
     for (i = 3; i < 5; i++) {
         scanf("%s", arr[i]);
     }
-
     printf("All 5 strings are: ");
     for (i = 0; i < 5; i++) {
         printf("%s ", arr[i]);
